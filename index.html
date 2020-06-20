@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Creative House</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -101,21 +103,32 @@
 
             <form action="">
 
-                <label for="title">Idea Title</label>
-                <input type="text" name="title">
+                <div class="input-wrapper">
+                    <label for="title">Idea Title</label>
+                    <input type="text" name="title">
+                </div>
 
-                <label for="category">Category</label>
-                <input type="text" name="category">
+                <div class="input-wrapper">
+                    <label for="category">Category</label>
+                    <input type="text" name="category">
+                </div>
 
-                <label for="image">Image Link</label>
-                <input type="url" name="image">
+                <div class="input-wrapper">
+                    <label for="image">Image Link</label>
+                    <input type="url" name="image">
+                </div>
 
-                <label for="description">Enter a description for this idea</label>
-                <textarea name="description" cols="30" rows="10"></textarea>
+                <div class="input-wrapper">
+                    <label for="description">Enter a description for this idea</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </div>
 
-                <label for="link">Idea Title</label>
-                <input type="url" name="link">
+                <div class="input-wrapper">
+                    <label for="link">Idea Title</label>
+                    <input type="url" name="link">
+                </div>
 
+                <button>Save</button>
             </form>
         </div>
     </div>
