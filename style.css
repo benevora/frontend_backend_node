@@ -18,10 +18,6 @@ body {
     display: flex;
 }
 
-.hide {
-    display: none;
-}
-
 a {
     color: #ff5E84;
     font-weight: bold;
@@ -126,7 +122,7 @@ footer {
 .idea {
     display: flex;
 
-    background-color: #FFF;
+    background-color: #ff5E84;
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
     border-radius: 8px;
 
@@ -148,13 +144,16 @@ footer {
 
 .idea p {
     margin: 8px 0;
-    color: #777;
+    color: rgb(87, 78, 78);
 }
 
 .idea .description {
     margin: 16px 0;
 }
 
+.idea a {
+    color: white;
+}
 /* =========(end -> [SECTION - LAST-IDEIAS])============= */
 
 
@@ -163,7 +162,7 @@ footer {
 
 /* =========(begin -> [DIV - MODAL])===================== */
 #modal {
-    background: #ff5E84;
+    background: white;
 
     position: absolute;
     top: 0;
@@ -173,12 +172,14 @@ footer {
 
     display: flex;
     justify-content: center;
+
+    transition: 400ms;
 }
 
 #modal .content {
     margin-top: 128px;
 
-    color: white;
+    color: #ff5E84;
     
 }
 
@@ -193,18 +194,104 @@ footer {
     max-width: 800px;
 
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
 }
 
-form input {
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form input, 
+form textarea {
+    background: #ff5E84;
     width: 100%;
 
     padding: 12px;
 
+    box-sizing: border-box;
+
     border-radius: 6px;
-    border: 1px solid;
+    border: 1px solid white;
+
+    outline: none;
+
+    font-size: 16px;
 }
 
-.input-wrapper {
-    margin: 16px;
+
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    background-color: #ff5e849d;
+    color: #fff;
+
+    width: 150px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end;
+
+    transition: 400ms;
+}
+
+
+form a:hover {
+    background: #0984e3;
+
+    text-decoration: none;
+}
+
+form button {
+    background: #ff5E84;
+    color: white;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #0984e3;
+    
+    text-decoration: none;
+}
+
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
 }
 /* =========(end -> [DIV - MODAL])======================= */
